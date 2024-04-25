@@ -8,7 +8,7 @@ import * as yup from "yup";
 import { yupResolver } from '@hookform/resolvers/yup';
 
 const schema = yup.object({
-
+  accountType: yup.string().required(),
 }).required();
 type FormData = yup.InferType<typeof schema>;
 
