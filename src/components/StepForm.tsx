@@ -9,6 +9,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import SuccessMsg from "./SuccessMsg";
 import Loading from "./Loading";
 import "./form.scss";
+import { motion } from "framer-motion";
 
 const schema = yup.object({
   accountType: yup.string().required(),
@@ -121,20 +122,20 @@ const StepForm = () => {
           <FormProvider {...methods}>
             <form onSubmit={methods.handleSubmit(onSubmit)}>
               {/*STEP 1 - initial screen*/}
-              {step == 1 && <StepOne nextStep={handleNextStep} />}
+              {step == 1 && <motion.div animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 1, ease: "easeInOut" }}><StepOne nextStep={handleNextStep} /></motion.div>}
 
               {/*STEP 2 - personal info*/}
-              {step == 2 && <StepTwo nextStep={handleNextStep} />}
+              {step == 2 && <motion.div animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 1, ease: "easeInOut" }}><StepTwo nextStep={handleNextStep} /></motion.div>}
 
               {/*STEP 3 - residency info*/}
-              {step == 3 && <StepThree nextStep={handleNextStep} />}
+              {step == 3 && <motion.div animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 1, ease: "easeInOut" }}><StepThree nextStep={handleNextStep} /></motion.div>}
 
               {/*STEP 4 - team*/}
-              {step == 4 && <StepFour />}
+              {step == 4 && <motion.div animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 1, ease: "easeInOut" }}><StepFour /></motion.div>}
               {step == 4 && <button className="button-1 mt" type="submit" >Save & continue</button>}
 
               {/*SUCCESS SCREEN */}
-              {step == 5 && <SuccessMsg />}
+              {step == 5 && <motion.div animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 1, ease: "easeInOut" }}><SuccessMsg /></motion.div>}
             </form>
           </FormProvider>
         </div>
