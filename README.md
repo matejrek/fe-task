@@ -1,30 +1,18 @@
-# React + TypeScript + Vite
+# Multi-step form
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+to run the application first run the command "npm install" and then to launch the development server run "npm run dev" - the application will open on http://localhost:5173/
 
-Currently, two official plugins are available:
+The app was developed on node version 20.12.2 using react version 18.2 setup with Vite.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+For the form I've used the react-hook-from library with yup for validation.
 
-## Expanding the ESLint configuration
+## Form submition
+With the post request I intentionally show the success component at the end every though the reuqest fails - in a real world scenario a error should be thrown/handled and a error message displayed in UI.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+### Suggestions for improvement
+-Refactor code to sepparate the layout and logic more
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+-Move the fetching logic to a Api class
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+-Make a icon font (f.e. fontello)
