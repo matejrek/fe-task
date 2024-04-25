@@ -19,6 +19,8 @@ const schema = yup.object({
     .matches(/[0-9]/, 'Password must contain at least one number')
     .matches(/[!@#$%^&*()_+\-=\[\]{};':\\|,.<>/?`~]/, 'Password must contain at least one special character'),
   agreedToTerms: yup.boolean().oneOf([true], "Required to accept terms"),
+  address: yup.string().required("Address is required!"),
+  country: yup.string().required("Please select a country!"),
 }).required();
 type FormData = yup.InferType<typeof schema>;
 

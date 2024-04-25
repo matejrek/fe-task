@@ -1,12 +1,5 @@
 import { useFormContext } from "react-hook-form"
 
-
-/*
- Name: At least 5 characters long.
- Email: Must match a valid email format.
- Password: Must include at least one uppercase letter, one lowercase letter, one number, and one special character.
- Checkbox (Terms & Conditions): Must be checked before proceeding
- */
 const StepTwo: React.FC<{ nextStep: () => void }> = ({ nextStep }) => {
   const { register, trigger, formState: { errors } } = useFormContext();
 
