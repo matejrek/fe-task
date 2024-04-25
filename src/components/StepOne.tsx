@@ -1,7 +1,8 @@
 import { useFormContext } from "react-hook-form"
 
 const StepOne: React.FC<{ nextStep: () => void }> = ({ nextStep }) => {
-  const { register, setValue } = useFormContext()
+  const { register, setValue } = useFormContext();
+
   const handleAccountType = (type: string) => {
     setValue('accountType', type);
     nextStep();
