@@ -1,0 +1,17 @@
+$primary: #1565D8;
+$white: #fff;
+$black: #000;
+$grey: #8692A6;
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+
+  &:hover {
+    color: lighten($primary, 7%);
+  }
+}

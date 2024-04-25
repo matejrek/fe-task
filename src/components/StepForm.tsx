@@ -8,6 +8,7 @@ import * as yup from "yup";
 import { yupResolver } from '@hookform/resolvers/yup';
 import SuccessMsg from "./SuccessMsg";
 import Loading from "./Loading";
+import "./form.scss";
 
 const schema = yup.object({
   accountType: yup.string().required(),
