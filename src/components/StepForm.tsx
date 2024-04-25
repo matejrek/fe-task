@@ -21,6 +21,7 @@ const schema = yup.object({
   agreedToTerms: yup.boolean().oneOf([true], "Required to accept terms"),
   address: yup.string().required("Address is required!"),
   country: yup.string().required("Please select a country!"),
+  additionalMembers: yup.array(),
 }).required();
 type FormData = yup.InferType<typeof schema>;
 
